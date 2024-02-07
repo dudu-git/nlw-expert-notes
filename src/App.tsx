@@ -1,6 +1,13 @@
 import logo from "./assets/Logo.svg";
 import { NewNoteCard } from "./components/NewNoteCard";
 import { NoteCard } from "./components/NoteCard";
+
+const note = {
+  date: new Date(),
+  content:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid veritatis a iure sed, debitis ipsam aspernatur suscipit, deserunt eius doloribus adipisci autem quo dolorem, obcaecati culpa ut minus qui distinctio?",
+};
+
 export function App() {
   return (
     <div className="mx-auto max-w-6xl my-12 space-y-6">
@@ -15,9 +22,7 @@ export function App() {
       <div className="h-px bg-slate-700" />
       <div className="grid grid-cols-3 auto-rows-[250px] gap-6">
         <NewNoteCard />
-        <NoteCard />
-        <NoteCard />
-        <NoteCard />
+        <NoteCard note={note} />
       </div>
     </div>
   );
